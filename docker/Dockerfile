@@ -1,7 +1,8 @@
 # Base image
-# FROM python:3.10-slim
-FROM gcr.io/google.com/cloudsdktool/cloud-sdk:slim@sha256:4bca8e5ea927bf040bdb31683b45f4daa9b5106fa749c46095072567a437389f
+FROM python:3.10-slim
+# FROM gcr.io/google.com/cloudsdktool/cloud-sdk:slim@sha256:4bca8e5ea927bf040bdb31683b45f4daa9b5106fa749c46095072567a437389f
 # FROM gcr.io/dna-retailermedia-dev-afab/aam@sha256:de15a645fe8a698d51f237b3be889fc2f9f05c71505f57c9e08217ffa71a4ce5
+
 
 
 
