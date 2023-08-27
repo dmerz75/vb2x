@@ -8,6 +8,9 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
+# LINUX:
+RUN apt-get update && apt-get install -y git
+
 # GIT:
 # RUN git clone -b ${app_tag} https://${github_token}@github.com/procter-gamble/ds-cf-aam-app.git
 RUN git clone https://github.com/dmerz75/vb2x.git
