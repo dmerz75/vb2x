@@ -3,8 +3,18 @@
 FROM gcr.io/google.com/cloudsdktool/cloud-sdk:slim@sha256:4bca8e5ea927bf040bdb31683b45f4daa9b5106fa749c46095072567a437389f
 # FROM gcr.io/dna-retailermedia-dev-afab/aam@sha256:de15a645fe8a698d51f237b3be889fc2f9f05c71505f57c9e08217ffa71a4ce5
 
+
+
 WORKDIR /app
-COPY hello.py .
+
+# GIT:
+# RUN git clone -b ${app_tag} https://${github_token}@github.com/procter-gamble/ds-cf-aam-app.git
+RUN git clone https://github.com/dmerz75/vb2x.git
+
+WORKDIR /app/vb2x
+RUN python -m pip install --upgrade pip
+RUN pip install .
+# COPY hello.py .
 
 # ARG github_token
 # ARG model_type
