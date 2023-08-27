@@ -12,7 +12,7 @@ WORKDIR /app
 RUN git clone https://github.com/dmerz75/vb2x.git
 
 WORKDIR /app/vb2x
-RUN python -m pip install --upgrade pip
+RUN pip install --upgrade pip
 RUN pip install .
 # COPY hello.py .
 
