@@ -6,7 +6,11 @@ FROM python:3.10-slim
 
 
 
+ENV PORT 8080
+
+
 WORKDIR /app
+
 
 # LINUX:
 RUN apt-get update && apt-get install -y git
