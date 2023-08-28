@@ -10,6 +10,7 @@ WORKDIR /app
 
 # LINUX:
 RUN apt-get update && apt-get install -y git
+RUN apt-get install -y python3.10
 
 # GIT:
 # RUN git clone -b ${app_tag} https://${github_token}@github.com/procter-gamble/ds-cf-aam-app.git
@@ -39,4 +40,5 @@ RUN pip install .
 # RUN pip install -r /data/requirements-deploy.txt
 # RUN pip install git+https://github.com/procter-gamble/ds-cf-aam-io@${aam_io_tag}#egg=broadcasting
 
-ENTRYPOINT ["python", "hello.py"]
+#, "hello.py"]
+ENTRYPOINT ["python3"]
