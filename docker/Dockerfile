@@ -45,4 +45,9 @@ RUN pip install .
 # RUN pip install git+https://github.com/procter-gamble/ds-cf-aam-io@${aam_io_tag}#egg=broadcasting
 
 #, "hello.py"]
-ENTRYPOINT ["python3"]
+# CMD exec gunicorn --bind 0.0.0.0:$PORT --workers 1 --threads 8 --timeout 0 main:app
+# ENTRYPOINT ["python", "manage.py", "runserver", "8080"]
+
+ENTRYPOINT ["python3", "hello.py"]
+
+
