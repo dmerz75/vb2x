@@ -23,6 +23,10 @@ RUN git clone https://github.com/dmerz75/vb2x.git
 WORKDIR /app/vb2x
 RUN pip install --upgrade pip
 RUN pip install .
+
+RUN ./vbsite/run_db_migrations.sh
+RUN ./vbsite/run.sh
+
 # COPY hello.py .
 
 # ARG github_token
