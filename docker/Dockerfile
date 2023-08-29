@@ -29,8 +29,8 @@ RUN ls *
 RUN pip install --upgrade pip
 RUN pip install .
 
-RUN vbsite/run_db_migrations.sh
-RUN vbsite/run.sh
+RUN cd vbsite && ./run_db_migrations.sh
+RUN cd vbsite && ./run.sh
 
 # COPY hello.py .
 
