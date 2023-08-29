@@ -1,0 +1,48 @@
+<form method="POST" enctype="multipart/form-data" action="/lets_play/round/add">
+
+    <!-- Security token
+    {% csrf_token %} 
+
+    Using the formset
+    {{ form.as_p }} -->
+
+    <h1>Let us begin!</h1>
+
+    <p>
+        <label for="num_players">Number of Players:</label>
+        <input id="num_players" name="num_players" type="text" required/>
+    </p>
+    <p>
+        <label for="non_exclusions">Non-exclusions:</label>
+        <input id="non_exclusions" name="non_exclusions" type="text" />
+    </p>
+
+
+    <input type="submit" name="submit1" value="Submit" onClick="CreateRound.create">
+</form>
+
+
+<style>
+    p {
+        text-indent: 3%;
+        padding: 10px;
+        padding: 10px;
+        /* text-align: 5%; */
+    }
+
+    /* input {
+        text-indent: 3%;
+    } */
+ 
+    .button {
+        background-color: #4CAF50; /* Green */
+        border: black;
+        border-width: medium;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+</style>

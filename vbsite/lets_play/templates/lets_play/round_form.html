@@ -1,0 +1,43 @@
+
+<body>
+
+    <dev>
+        <h1>Hello there, here are your results:</h1>
+
+        <h2> {{ message }} </h2>
+
+        <p>
+            The number of players are: {{ num_players }}.
+            The non-exclusions are: {{ non_exclusions }}.
+        </p>
+
+
+    </dev>
+
+    <dev>
+        <ul>
+            {% for round in latest %}
+                <li>{{ round.pubdate }}: {{ round.num_players }}</li>
+            {% endfor %}
+        </ul>
+    
+
+    </dev>
+
+</body>
+
+
+<style>
+    h1 {
+        font-size: larger;
+        font-family: Cambria;
+    }
+
+    h2 {
+        font-size: medium;
+        font-family: Verdana;
+    }
+
+</style>
+
+

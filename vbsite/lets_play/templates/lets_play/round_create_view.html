@@ -1,0 +1,23 @@
+{% extends 'lets_play/base.html' %}
+
+{% block body %}
+
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p}}
+
+
+    <input type="submit" value="Save" />
+    <!-- <input type="submit" value="Retrieve" /> -->
+
+</form>
+
+<div>
+
+    <p>{{ context.status }}</p>
+</div>
+
+
+{% endblock %}
+

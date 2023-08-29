@@ -1,0 +1,34 @@
+{% block content %}
+    <h2>Rounds</h2>
+    <ul>
+        {% for round in object_list %}
+            <li>Round ID: {{ round.id }}<br>
+                <h3>Number of players: {{round.num_players}}</h3>
+                <h3>Non-Exclusions: {{round.non_exclusions}}</h3>
+                <!-- <div class="text"> -->
+                    <h4>Info: {{round.message}}</h4>
+                <!-- </div> -->
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+<style>
+    h2 {
+        font-size: larger;
+        font-weight: bold;
+    }
+    h3 {
+        font-size: medium;
+        font-weight: 500;
+        text-indent: 3%;
+    }
+
+    h4 {
+        font-size: medium;
+        font-weight: 400;
+        text-indent: 1%;
+        white-space: pre-line;
+    }
+
+</style>

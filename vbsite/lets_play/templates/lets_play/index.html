@@ -1,0 +1,24 @@
+{% extends "lets_play/layout.html" %}
+
+{% block body %}
+
+    <div class="container">
+        
+        <h1>Let's Play!</h1>
+
+            {% csrf_token %}
+	    <div class="form-group">
+            Number of players:
+            {{ form.num_players }}
+	    </div>
+	    <div class="form-group">
+            Non-exclusions:
+            {{ form.non_exclusions }}
+	    </div>
+	    <div class="form-group">
+                <input class="btn btn-success" type="submit" value="Submit">
+	    </div>
+        </form>
+    </div>
+
+{% endblock %}
