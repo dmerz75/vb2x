@@ -1,7 +1,7 @@
 steps:
 # Build the container image
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/vb2x-395719/vb2x', './docker/Dockerfile']
+  args: ['build', '-t', 'gcr.io/vb2x-395719/vb2x', './docker/']
 # Push the container image to Container Registry
 # - name: 'gcr.io/cloud-builders/docker'
 #   args: ['push', 'gcr.io/vb2x-395719/vb2x']
