@@ -22,7 +22,10 @@ RUN git clone https://github.com/dmerz75/vb2x.git
 
 WORKDIR /app/vb2x
 
+RUN pwd
 RUN ls
+RUN echo "-listsubdirs-"
+RUN ls *
 RUN pip install --upgrade pip
 RUN pip install .
 
