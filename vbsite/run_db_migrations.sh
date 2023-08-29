@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # python manage.py runserver
+python manage.py flush
 
 python manage.py makemigrations   # edit app
 python manage.py migrate --run-syncdb
