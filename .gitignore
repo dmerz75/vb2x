@@ -162,3 +162,9 @@ cython_debug/
 
 # project:
 volleyball/matchups.txt
+
+
+# Django
+*~
+/static
+.DS_Store
