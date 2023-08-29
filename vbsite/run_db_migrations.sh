@@ -2,8 +2,8 @@
 
 # python manage.py runserver
 
-python3 manage.py makemigrations   # edit app
-
+python manage.py makemigrations   # edit app
+python manage.py migrate --run-syncdb
 
 python manage.py makemigrations polls
 python manage.py sqlmigrate polls 0001
