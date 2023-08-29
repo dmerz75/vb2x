@@ -29,6 +29,7 @@ RUN ls *
 RUN pip install --upgrade pip
 RUN pip install .
 
+RUN cd vbsite && pip install -r requirements.txt
 RUN cd vbsite && ./run_db_migrations.sh
 RUN cd vbsite && ./run.sh
 
