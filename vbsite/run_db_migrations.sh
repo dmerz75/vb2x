@@ -14,5 +14,4 @@ python manage.py sqlmigrate vbcourtassign 0001
 python manage.py makemigrations lets_play
 python manage.py sqlmigrate lets_play 0001
 
-python3 manage.py migrate    # apply changes to DB
-
+python3 manage.py migrate --run-syncdb # apply changes to DB
