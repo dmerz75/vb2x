@@ -21,11 +21,13 @@ RUN apt-get install -y python3.10
 RUN git clone https://github.com/dmerz75/vb2x.git
 
 WORKDIR /app/vb2x
+
+RUN ls
 RUN pip install --upgrade pip
 RUN pip install .
 
-RUN ./vbsite/run_db_migrations.sh
-RUN ./vbsite/run.sh
+RUN vbsite/run_db_migrations.sh
+RUN vbsite/run.sh
 
 # COPY hello.py .
 
