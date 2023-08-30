@@ -6,7 +6,6 @@ asgiref==3.7.2
 asttokens==2.2.1
 backcall==0.2.0
 binaryornot==0.4.4
-# bottle==0.12.25
 certifi==2023.7.22
 chardet==5.2.0
 charset-normalizer==3.2.0
@@ -40,6 +39,10 @@ pickleshare==0.7.5
 platformdirs==3.10.0
 prompt-toolkit==3.0.39
 psutil==5.9.5
+psycopg==3.1.10
+psycopg-binary==3.1.10
+psycopg-pool==3.1.7
+psycopg2-binary==2.9.7
 ptyprocess==0.7.0
 pure-eval==0.2.2
 pydantic==2.1.1
@@ -62,5 +65,5 @@ tornado==6.3.3
 traitlets==5.9.0
 typing_extensions==4.7.1
 urllib3==2.0.4
-# uvicorn==0.23.2
+volleyball @ file:///Users/merz.d/volleyball/vb2x
 wcwidth==0.2.6

@@ -4,7 +4,7 @@ from django.views.generic.dates import ArchiveIndexView
 from .models import Round
 # from .views import RoundWeekArchiveView
 
-from . import views
+# from . import views
 # from .views import CreateRound, RoundListView
 
 from lets_play.views import (
@@ -14,8 +14,8 @@ from lets_play.views import (
     round_list_view,
     round_update_view,
     RoundView,
-    RoundListView,
-    RoundListViewLatest,
+    # RoundListView,
+    # RoundListViewLatest,
 )
 
 app_name = 'lets_play'
@@ -50,15 +50,15 @@ urlpatterns = [
     path('<int:id>/edit/', round_update_view, name="update"),
     path('<int:id>/', round_detail_view, name="detail"),
 
-    path('latest/', RoundListViewLatest.get_latest,),
+    # path('latest/', RoundListViewLatest.get_latest,),
     # path('createround/', views.CreateRound.as_view(template_name="lets_play/create_round.html")),
     # path('round/add',
     #      views.CreateRound.create,
     #      name="create-round"),
-    path('roundlist/', views.RoundListView.as_view(), name='roundlist'),
+    # path('roundlist/', RoundListView.as_view(), name='roundlist'),
     # path('index', views.new_round.as_view(template_name="lets_play/ "))
     # path('members/', views.members, name='members'),
-    path('members', include('members.urls')),
+    # path('members', include('members.urls')),
     path('admin/', admin.site.urls),
     # Example: /2012/week/23/
     # path('<int:year>/week/<int:week>/',
