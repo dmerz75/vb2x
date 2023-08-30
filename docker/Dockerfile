@@ -4,13 +4,9 @@ FROM python:3.10-slim
 # FROM gcr.io/dna-retailermedia-dev-afab/aam@sha256:de15a645fe8a698d51f237b3be889fc2f9f05c71505f57c9e08217ffa71a4ce5
 
 
-
-
 ENV PORT 8080
 
-
 WORKDIR /app
-
 
 # LINUX:
 RUN apt-get update && apt-get upgrade
