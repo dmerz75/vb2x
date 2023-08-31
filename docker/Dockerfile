@@ -32,7 +32,7 @@ RUN pip install .
 
 RUN cd vbsite && pip install -r requirements.txt
 RUN cd vbsite && ./run_db_migrations.sh
-RUN cd vbsite && ./run.sh
+# RUN cd vbsite && ./run.sh
 
 # COPY hello.py .
 
