@@ -35,18 +35,18 @@ class RoundListView(ListView):
     ordering = ['-created_at']
 
 
-class RoundListViewLatest(ListView):
-    model = Round
-    # context_object_name = "list_of_rounds"
-    # ordering = ['-created_at']
-    my_rounds = Round.objects.latest("created_at")
-    # my_round = my_rounds[-1]
+# class RoundListViewLatest(ListView):
+#     model = Round
+#     # context_object_name = "list_of_rounds"
+#     # ordering = ['-created_at']
+#     my_rounds = Round.objects.latest("created_at")
+#     # my_round = my_rounds[-1]
 
-    def get_latest(self, request):
-        context = {
-            'round': self.my_round
-        }
-        return render(request, "lets_play/round_list.html", context)
+#     def get_latest(self, request):
+#         context = {
+#             'round': self.my_round
+#         }
+#         return render(request, "lets_play/round_list.html", context)
 
 
 @login_required
