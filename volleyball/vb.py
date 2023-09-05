@@ -13,13 +13,18 @@ def print_everything(courts, players, teams, excluded_players):
     print(f"the teams are: {teams}")
     print(f"sitting out: {excluded_players}")
 
+    matchups = []
+
     # msg = "-start-\n"
     msg = ""
+
 
     for x in range(0, len(teams)-1, 2):
         team1 = teams[x]
         team2 = teams[x+1]
-        msg += f"match: {team1[0]}--{team1[1]}  vs  {team2[0]}--{team2[1]}\n"
+        m = f"\t\tmatch: {team1[0]}--{team1[1]}  vs  {team2[0]}--{team2[1]}\n"
+        msg += m
+        matchups.append(m)
 
     msg += f"sitting this round:  {excluded_players}\n"
     # msg += "-end-\n"
@@ -27,7 +32,7 @@ def print_everything(courts, players, teams, excluded_players):
     with(open("matchups.txt", "a+")) as fp:
         fp.write(msg)
 
-    return msg
+    return msg, matchups
 
 def list_contains(List1, List2):
     set1 = set(List1)
@@ -107,13 +112,13 @@ def main(num_players, excluded):
     print(f"newly excluded: {new_excluded}")
     print(f"shuffled: {shuffled_players}")
     print(f"recently_excluded: {recently_excluded}")
-    message = print_everything(courts, shuffled_players, teams, new_excluded)
+    message, matchups = print_everything(courts, shuffled_players, teams, new_excluded)
 
     print("results:")
     print(type(new_excluded), type(message))
     print(f"new_excluded: {new_excluded}")
     print(f"message: {message}")
-    return new_excluded, message
+    return new_excluded, message, matchups
 
 
 if __name__ == "__main__":
@@ -137,5 +142,5 @@ if __name__ == "__main__":
     #     excluded = []
 
     num_players = args.number
-    excluded, message = main(num_players, args.excluded)
+    excluded, message, matchups = main(num_players, args.excluded)
     # print("latest excluded:", excluded)
